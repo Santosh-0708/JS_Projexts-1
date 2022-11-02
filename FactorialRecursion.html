@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script>
+        var num = prompt("Enter a number:");
+       var fact = 1;
+        function factr(n){
+            if(n>num){
+                return;
+            }
+            var temp = fact;
+            fact= fact * n;
+            n++;
+            factr(n);
+        }
+        factr(1);
+            document.write(`The Factorial of ${num} is ${fact}`);
+    </Script>
+</head>
+<body>
+    
+</body>
+</html>
