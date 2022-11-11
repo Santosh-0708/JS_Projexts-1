@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script>
+
+        const arr = [1,2,3,[4, 5,[ 6, 7,[8]]]]; 
+
+        let new1Array = [].concat.apply([], arr);//Using concat() and apply()
+        
+        let new2Array = [].concat(...arr);//Using the spread operator
+
+        let new3Array = arr.reduce((acc, curVal) => { //reduce method
+            return acc.concat(curVal)
+        }, []);
+
+
+        document.write(new1Array + "<br>");
+        document.write(new2Array+ "<br>");
+        document.write(new3Array+ "<br>");
+
+
+    </Script>
+</head>
+<body>
+    
+</body>
+</html>
